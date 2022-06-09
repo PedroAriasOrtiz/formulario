@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+/* root se utiliza para crear variables con valores repetitivos dentro  */ 
+/* del sitio web como colores, tamaños, margenes */
+
+:root{
+--pimary-color: #ff0000;
+--secondary-color: #000000;
+}
+
+/*llamar a una clase*/
+.fila{
+    display: flex;
+    width: 1200px;
+    margin: 30px auto;
+    border: 2px solid var(--pimary-color);
+}
+
+/*llamar a una clase y su contenido*/
+.fila .contBotones{
+    width: 50%;
+    background: var(--pimary-color);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.contBotones h2{
+    color: #000000;
+    font-size: 33px;
+    margin-bottom: 30px;
+}
+
+.contBotones button{
+    padding: 5px 15px;
+    background:#ffffff;
+    color: var(--pimary-color);
+    border: 2px solid #000000;
+    font-size: 25px;
+    margin: 12px;
+}
+
+.fila .contFigura{
+    width: 50%;
+    text-align: center;
+    padding: 30px 20px;
+    background: #fbff00;
+}
+
+.contFigura h2{
+    font-size: 40px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.contFigura #figura{
+    width: 200px;
+    height: 200px;
+    background: #000000;
+    margin: 40px auto;
+    transition: 1s;
+}
+
+#figura.circulo{
+    background: #ffffff;
+    border: 2px solid #ff0000;
+    border-radius: 50%;
+    transform: rotate(-360deg);
+
+    /* transform tiene deferentes valores
+    rotate= girar
+    scale= aumentar o disminuir
+    translate= es mover en eje (X) y eje (Y)
+    skew= distorcionar */
+}
+
+#figura.rombo{
+    background: #ffffff;
+    border: 2px solid #ff0000;
+    transform: rotate(-135deg);
+}
+
+#figura.rectanguloh{
+    width: 300px;
+    height: 125px;
+    background: #ffffff;
+    margin: 40px auto;
+    transition: 1s;
+    border: 2px solid #ff0000;
+}
+
+#figura.rectangulov{
+    width: 120px;
+    height: 200px;
+    background: #ffffff;
+    margin: 40px auto;
+    transition: 1s;
+    border: 2px solid #ff0000;
+}
+
+#figura.arriba{
+    width: 130px;
+    height: 130px;
+    background: #ffffff;
+    margin: 40px auto;
+    transition: 1s;
+    border: 2px solid #ff0000;
+    transform: translateY(-35%);
+}
+
+#figura.abajo{
+    width: 130px;
+    height: 130px;
+    background: #ffffff;
+    margin: 40px auto;
+    transition: 1s;
+    border: 2px solid #ff0000;
+    transform: translateY(115%);
+}
+
+#figura.izquierda{
+    background: #ffffff;
+    margin: 40px auto;
+    transition: 1s;
+    border: 2px solid #ff0000;
+    transform: translateX(-150px);
+}
+
+#figura.derecha{
+    background: #ffffff;
+    margin: 40px auto;
+    transition: 1s;
+    border: 2px solid #ff0000;
+    transform: translateX(150px);
+}
+
+#figura.diagonal{
+    transform: translate(-150px, 80px);
+
+}
+
+#figura.triangulo{
+        background:transparent ;
+        width: 0;
+        height: 0;
+        border-right: 120px solid transparent;
+        border-bottom: 200px solid #000000;
+        border-left: 120px solid transparent;
+}
+
+#figura.imagen{
+    background-image: url(../img/img1.png);
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#capturaDatos{
+    background: #fbff00;
+}
+
+.fila .contForm{
+    width: 50%;
+    background: #000000;
+    color: #00ffff;
+    text-align: center;
+    padding: 50px;
+}
+
+.fila .contForm h1{
+    font-size: 25px;
+}
+
+.fila .contForm p{
+    font-size: 17px;}
+
+.contForm form .formGroup{
+    padding: 10px 45px;
+    text-align: left;
+}
+
+form .formGroup label{
+    display: block;
+}
+
+form .formGroup input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 17px;
+}
+form .formGroup select{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 17px;
+}
+
+form .formGroup textarea{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 17px;
+}
+
+form button{
+    background: #00ffff;
+    font-size: 20px;
+    padding: 12px 40px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+form button:hover{
+padding: 13px 55px;
+}
+
+form {
+    margin-top: 40px;
+}
+
+.fila .contAvatar{
+    text-align: center;
+    padding: 40px;
+    background: #efefef;;
+    width: 50%;
+}
+
+.fila .contAvatar img{
+    width: 190px;
+}
+
+.fila .contAvatar h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.fila .contAvatar p{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.contAvatar.rojo{
+    background: #ff0000;
+}
+
+.contAvatar.azul{
+    background: #0011ff;
+}
+
+.contAvatar.verde{
+    background: #1eff00;
+}
+
+.contAvatar.morado{
+    background: #9900ff;
+}
+
+.contAvatar.gris{
+    background: #817777;
+}
+.btn-nav{
+    position: absolute;
+    bottom: 100px;
+    right: 120px;
+    background: #6f23b6;
+    color: #efefef;
+}
